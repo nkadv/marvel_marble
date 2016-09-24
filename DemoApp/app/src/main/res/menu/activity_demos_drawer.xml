@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<group android:checkableBehavior="single">-->
+        <!--<item android:id="@+id/m1" android:icon="@drawable/m1_icon"-->
+            <!--android:title="Intoduction to Android" />-->
+        <!--<item android:id="@+id/m2" android:icon="@drawable/m2_icon"-->
+            <!--android:title="Android Layouts and Widgets" />-->
+        <!--<item android:id="@+id/m3" android:icon="@drawable/m3_icon"-->
+            <!--android:title="Activity Notifications and Media" />-->
+        <!--<item android:id="@+id/m4" android:icon="@drawable/m4_icon"-->
+            <!--android:title="Widget Customization annd Event Listeners" />-->
+        <!--<item android:id="@+id/m5" android:icon="@drawable/m5_icon"-->
+            <!--android:title="Storage and Animations" />-->
+        <!--<item android:id="@+id/m6" android:icon="@drawable/m6_icon"-->
+            <!--android:title="Web Services" />-->
+        <!--<item android:id="@+id/m7" android:icon="@drawable/m7_icon"-->
+            <!--android:title="Location and Google Maps" />-->
+        <!--<item android:id="@+id/m8" android:icon="@drawable/m8_icon"-->
+            <!--android:title="Database Framework and 3rd Party Libraries" />-->
+        <!--<item android:id="@+id/m9" android:icon="@drawable/m9_icon"-->
+            <!--android:title="Sensors and Social Media Integration" />-->
+        <!--<item android:id="@+id/m10" android:icon="@drawable/m10_icon"-->
+            <!--android:title="End to End App Development and Publishing" />-->
+
+    <!--</group>-->
+
+    <item android:title="Sites">
+        <menu>
+            <item android:id="@+id/a_sties" android:icon="@drawable/active"
+                android:title="Active Sites"/>
+            <item android:id="@+id/c_sties" android:icon="@drawable/close"
+                android:title="Closed Sites"/>
+            <item android:id="@+id/add_stie" android:icon="@drawable/a_site"
+                android:title="Add Site"/>
+        </menu>
+    </item>
+
+    <item android:title="Labour">
+        <menu>
+            <item android:id="@+id/v_labours" android:icon="@drawable/v_labour"
+                android:title="View Labours"/>
+            <item android:id="@+id/a_labours" android:icon="@drawable/a_labour"
+                android:title="Add Labours"/>
+        </menu>
+    </item>
+
+    <item android:title="Materials">
+        <menu>
+            <item android:id="@+id/v_material" android:icon="@drawable/v_material"
+                android:title="View Material"/>
+            <item android:id="@+id/a_material" android:icon="@drawable/a_material"
+                android:title="Add Material"/>
+        </menu>
+    </item>
+
+    <item android:title="SubContractors">
+        <menu>
+            <item android:id="@+id/v_sub_contrctors" android:icon="@drawable/contractor"
+                android:title="View Subcontractors"/>
+            <item android:id="@+id/a_sub_contrctors" android:icon="@drawable/a_s_contractor"
+                android:title="Add Subcontractors"/>
+        </menu>
+    </item>
+
+    <item android:title="Reports">
+        <menu>
+            <item android:id="@+id/s_reports" android:icon="@drawable/report"
+                android:title="Site Reports"/>
+            <item android:id="@+id/l_reports" android:icon="@drawable/report"
+                android:title="labour Reports"/>
+        </menu>
+    </item>
+
+</menu>

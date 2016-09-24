@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edureka.sites">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ms_icon"
+        android:label="Demos"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="edureka.sites.HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="edureka.sites.AddSiteActivity"
+            android:label="@string/sitecreation"
+            android:parentActivityName="edureka.sites.HomeActivity" />
+
+        <activity android:name="edureka.sites.SiteActivity"
+            android:label="SiteDetails"
+            android:parentActivityName="edureka.sites.HomeActivity"/>
+
+        <activity android:name="edureka.sites.LabourActvity"
+            android:label="LabourDetails"
+            android:parentActivityName="edureka.sites.HomeActivity"></activity>
+    </application>
+
+</manifest>

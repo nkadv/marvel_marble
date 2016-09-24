@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/expense"
+        android:title="Add Expense"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/labour"
+        android:title="Add/Remove Labour"
+        android:orderInCategory="200"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/material"
+        android:title="Add Material"
+        android:orderInCategory="300"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/money"
+        android:title="Allocate Money"
+        android:orderInCategory="400"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/reports"
+        android:title="Generate Reports"
+        android:orderInCategory="500"
+        app:showAsAction="never" />
+
+</menu>
