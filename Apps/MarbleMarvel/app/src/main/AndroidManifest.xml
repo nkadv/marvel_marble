@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mm.entry">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/mm_drawer_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mm.labours.ViewLaboursActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name="com.mm.labours.AddLabourActivity"
+            android:parentActivityName="com.mm.labours.ViewLaboursActivity" />
+        <activity
+            android:name="com.mm.labours.LabourActivity"
+            android:parentActivityName="com.mm.labours.ViewLaboursActivity" />
+        <activity
+            android:name="com.mm.materials.ViewMaterialsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name="com.mm.materials.AddMaterialActivity"
+            android:parentActivityName="com.mm.materials.ViewMaterialsActivity" />
+        <activity
+            android:name="com.mm.materials.MaterialActivity"
+            android:parentActivityName="com.mm.labours.ViewLaboursActivity" />
+        <activity android:name="com.mm.sites.SiteActivity" />
+        <!-- android:parentActivityName=".MainActivity" /> -->
+        <activity android:name="com.mm.sites.ActiveStiesActivity" />
+        <activity android:name="com.mm.sites.ClosedSitesActivity" />
+        <activity android:name="com.mm.sites.PendingSitesActivity" />
+        <activity
+            android:name="com.mm.sites.AddSiteActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name="com.mm.sites.expenses.labour.AllocateLabour"
+            android:parentActivityName="com.mm.sites.SiteActivity" />
+        <activity android:name="com.mm.employees.AddEmployeeActivity" />
+        <activity android:name="com.mm.sites.attendance.AttendanceActivity" />
+        <activity
+            android:name="com.mm.employees.ViewEmployeesActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name="com.mm.employees.EmployeeActivity" />
+        <activity android:name="com.mm.sites.expenses.materials.AllocateMaterial"></activity>
+    </application>
+
+</manifest> <!-- TODO: Parent Activity for Site Activity -->

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mm.sites.SiteActivity">
+
+    <TextView
+        android:id="@+id/site_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SiteName: "
+        android:textSize="20sp"/>
+
+
+    <TextView
+        android:id="@+id/site_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/site_name"
+        android:textSize="20sp"/>
+
+     <TextView
+        android:id="@+id/site_startDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/site_location"
+         android:textSize="20sp"/>
+
+    <View
+        android:id="@+id/site_labour_sep"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/site_startDate"/>
+
+    <ImageView
+        android:id="@+id/site_labour_ec"
+        android:layout_below="@+id/site_labour_sep"
+        android:src="@drawable/collapse"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        />
+    <TextView
+        android:id="@+id/site_labours_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Labours Details"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/site_labour_ec"
+        android:layout_below="@+id/site_labour_sep"
+        android:textSize="20sp"/>
+
+    <ListView
+        android:id="@+id/site_labour_list"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_marginLeft="35dp"
+        android:layout_below="@+id/site_labour_ec"
+        android:visibility="gone"></ListView>
+
+    <View
+        android:id="@+id/site_material_sep"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/site_labour_list"/>
+
+    <ImageView
+        android:id="@+id/site_material_ec"
+        android:layout_below="@+id/site_material_sep"
+        android:src="@drawable/collapse"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        />
+    <TextView
+        android:id="@+id/site_material_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Material Details"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/site_material_ec"
+        android:layout_below="@+id/site_material_sep"
+        android:textSize="20sp"/>
+
+    <ListView
+        android:id="@+id/site_material_list"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_marginLeft="35dp"
+        android:layout_below="@+id/site_material_ec"
+        android:visibility="gone"></ListView>
+
+
+</RelativeLayout>
+</ScrollView>

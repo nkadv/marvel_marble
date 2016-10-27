@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emp_type_array">
+        <item>Super (Full Access)</item>
+        <item>Normal(Limited Access)</item>
+    </string-array>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Sites">
+        <menu>
+            <item android:id="@+id/nav_active_sties" android:icon="@drawable/active"
+                android:title="Active Sites"/>
+            <item android:id="@+id/nav_closed_sites" android:icon="@drawable/close"
+                android:title="Closed Sites"/>
+            <item android:id="@+id/nav_add_site" android:icon="@drawable/a_site"
+                android:title="Add Site"/>
+        </menu>
+    </item>
+
+    <item android:title="Labour">
+        <menu>
+            <item android:id="@+id/nav_labours" android:icon="@drawable/v_labour"
+                android:title="View Labours"/>
+            <item android:id="@+id/nav_add_labour" android:icon="@drawable/a_labour"
+                android:title="Add Labours"/>
+        </menu>
+    </item>
+
+    <item android:title="Materials">
+        <menu>
+            <item android:id="@+id/nav_materials" android:icon="@drawable/v_material"
+                android:title="View Material"/>
+            <item android:id="@+id/nav_add_material" android:icon="@drawable/a_material"
+                android:title="Add Material"/>
+        </menu>
+    </item>
+
+    <item android:title="Employees">
+        <menu>
+            <item android:id="@+id/nav_employees" android:icon="@drawable/contractor"
+                android:title="View Employees"/>
+            <item android:id="@+id/nav_add_employees" android:icon="@drawable/a_s_contractor"
+                android:title="Add Employees"/>
+        </menu>
+    </item>
+
+    <item android:title="Reports">
+        <menu>
+            <item android:id="@+id/nav_site_reports" android:icon="@drawable/report"
+                android:title="Site Reports"/>
+            <item android:id="@+id/nav_labour_reports" android:icon="@drawable/report"
+                android:title="labour Reports"/>
+        </menu>
+    </item>
+
+</menu>
+
+
+    <!--<group android:checkableBehavior="single">-->
+    <!--<item-->
+    <!--android:id="@+id/nav_camera"-->
+    <!--android:icon="@drawable/ic_menu_camera"-->
+    <!--android:title="Import" />-->
+    <!--<item-->
+    <!--android:id="@+id/nav_gallery"-->
+    <!--android:icon="@drawable/ic_menu_gallery"-->
+    <!--android:title="Gallery" />-->
+    <!--<item-->
+    <!--android:id="@+id/nav_slideshow"-->
+    <!--android:icon="@drawable/ic_menu_slideshow"-->
+    <!--android:title="Slideshow" />-->
+    <!--<item-->
+    <!--android:id="@+id/nav_manage"-->
+    <!--android:icon="@drawable/ic_menu_manage"-->
+    <!--android:title="Tools" />-->
+    <!--</group>-->
+
+    <!--<item android:title="Communicate">-->
+    <!--<menu>-->
+    <!--<item-->
+    <!--android:id="@+id/nav_share"-->
+    <!--android:icon="@drawable/ic_menu_share"-->
+    <!--android:title="Share" />-->
+    <!--<item-->
+    <!--android:id="@+id/nav_send"-->
+    <!--android:icon="@drawable/ic_menu_send"-->
+    <!--android:title="Send" />-->
+    <!--</menu>-->
+    <!--</item>-->

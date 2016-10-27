@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="material_units">
+        <item>Number</item>
+        <item>Kg</item>
+        <item>Feet</item>
+        <item>Litre</item>
+        <item>Meter</item>
+        <item>Inch</item>
+    </string-array>
+</resources>

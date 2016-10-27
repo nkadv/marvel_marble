@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/att_list_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".50"
+        android:textSize="20dp"
+        android:text="12-Oct-2016 Mon"/>
+
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/att_list_mf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".30"/>
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/att_list_presnt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_weight=".20"/>
+
+
+</LinearLayout>
