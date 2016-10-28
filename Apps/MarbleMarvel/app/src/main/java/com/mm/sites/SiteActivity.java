@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,6 +31,8 @@ public class SiteActivity extends AppCompatActivity implements View.OnClickListe
 
     int siteId;
     TextView name,location,date;
+    TextView siteLabourDesc;
+    TextView siteMaterialDesc;
 
     LabourStorage lStorage;
     SiteLabourStorage slStorage;
@@ -45,6 +48,7 @@ public class SiteActivity extends AppCompatActivity implements View.OnClickListe
     ImageView material_ec;
     boolean materialCollapse;
     ListView material_list;
+    CardView labour_card_view;
     private SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +106,14 @@ public class SiteActivity extends AppCompatActivity implements View.OnClickListe
         materialCollapse = true;
 
         material_list = (ListView)findViewById(R.id.site_material_list);
+
+        siteMaterialDesc = (TextView) findViewById(R.id.site_material_desc);
+        siteLabourDesc = (TextView)findViewById(R.id.site_labours_desc);
+        siteLabourDesc.setOnClickListener(this);
+        siteMaterialDesc.setOnClickListener(this);
+
+
+        labour_card_view = (CardView)findViewById(R.id.site_labour_list_card);
 
 
     }
@@ -178,31 +190,34 @@ public class SiteActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.site_labour_ec:
+            case R.id.site_labours_desc:
                 if(labourCollapse){
-                    view.setBackgroundResource(R.drawable.expand);
+                    labour_ec.setBackgroundResource(R.drawable.expand);
                     labourCollapse = false;
                     labour_list.setVisibility(View.VISIBLE);
+                    labour_card_view.setVisibility(View.VISIBLE);
+
                     populateLabours();
                     //show labour list
                 }else{
                     labourCollapse = true;
-                    view.setBackgroundResource(R.drawable.collapse);
+                    labour_ec.setBackgroundResource(R.drawable.collapse);
                     labour_list.setVisibility(View.GONE);
+                    labour_card_view.setVisibility(View.GONE);
                     //hide labour list view
                 }
                 break;
             case R.id.site_material_ec:
+            case R.id.site_material_desc:
                 if(materialCollapse){
-                    view.setBackgroundResource(R.drawable.expand);
+                    material_ec.setBackgroundResource(R.drawable.expand);
                     materialCollapse = false;
                     material_list.setVisibility(View.VISIBLE);
                     populateMaterials();
 
-
-
                 }else{
                     materialCollapse = true;
-                    view.setBackgroundResource(R.drawable.collapse);
+                    material_ec.setBackgroundResource(R.drawable.collapse);
                     material_list.setVisibility(View.GONE);
 
                 }
@@ -226,7 +241,6 @@ public class SiteActivity extends AppCompatActivity implements View.OnClickListe
                 labour.place = c.getString(3);
 //                labour.doj = c.getString(4);
 //                labour.rate = c.getDouble(5);
-
 
                 Intent intent = new Intent(this, com.mm.labours.LabourActivity.class);
                 intent.putExtra("labour",labour);

@@ -167,8 +167,8 @@ public class MainActivity extends AppCompatActivity
 
             if (cursor != null) {
                 String[] from = new String[]{DBSchema.Sites.NAME, DBSchema.Sites.LOCATION};
-                int[] to = new int[]{android.R.id.text1,android.R.id.text2};
-                SimpleCursorAdapter sCA = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_2, cursor, from, to, 0);
+                int[] to = new int[]{R.id.as_site_name,R.id.as_site_location};
+                SimpleCursorAdapter sCA = new SimpleCursorAdapter(this, R.layout.active_site_list_layout, cursor, from, to, 0);
                 lvActiveSites.setAdapter(sCA);
             }
         }
@@ -179,8 +179,10 @@ public class MainActivity extends AppCompatActivity
 
             if (cursor != null) {
                 String[] from = new String[]{DBSchema.Sites.NAME, DBSchema.Sites.LOCATION};
-                int[] to = new int[]{android.R.id.text1,android.R.id.text2};
-                SimpleCursorAdapter sCA = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_2, cursor, from, to, 0);
+                int[] to = new int[]{R.id.as_site_name,R.id.as_site_location};
+                SimpleCursorAdapter sCA = new SimpleCursorAdapter(this, R.layout.active_site_list_layout, cursor, from, to, 0);
+//                int[] to = new int[]{android.R.id.text1,android.R.id.text2};
+//                SimpleCursorAdapter sCA = new SimpleCursorAdapter(this, R.layout.active_site_list_layout, cursor, from, to, 0);
                 lvActiveSites.setAdapter(sCA);
             }
         }

@@ -64,12 +64,14 @@ public class AllocateLabour extends AppCompatActivity implements View.OnClickLis
             }
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                populateSuggestionList(charSequence.toString());
+               // populateSuggestionList(charSequence.toString());
             }
 
             @Override
             public void afterTextChanged(Editable editable) {
-                populateSuggestionList(editable.toString());
+                //if(editable.toString().length() <10)  //TODO: Crappy Bug, need proper fix
+                if(!editable.toString().contains("@"))  //TODO: Crappy Bug, need proper fix
+                     populateSuggestionList(editable.toString());
             }
         });
 

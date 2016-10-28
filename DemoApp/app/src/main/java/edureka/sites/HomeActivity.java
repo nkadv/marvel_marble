@@ -19,6 +19,7 @@ import android.widget.TextView;
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemClickListener {
 
+
     String moduleNames[]={
             "Active Sites",
             "Closed Sites",
@@ -102,11 +103,19 @@ public class HomeActivity extends AppCompatActivity
          /*Set Active Sites*/
         moduleName.setText(moduleNames[0]);
         sAdapter.clear();
+        //sites.getSites(this);
         if((sites.getActiveSites()).length!=0) {
             sAdapter.addAll(sites.getActiveSites());
             moduleDemos.setAdapter(sAdapter);
             activityName = "site";
         }
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //sites.saveSites();
 
     }
 

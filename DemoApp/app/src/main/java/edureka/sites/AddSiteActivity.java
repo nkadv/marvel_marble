@@ -32,8 +32,6 @@ public class AddSiteActivity extends AppCompatActivity implements View.OnClickLi
         Intent intent = getIntent();
         sites = (Sites)intent.getSerializableExtra("siteObj");
 
-        int len = sites.getClosedSites().length;
-        //Toast.makeText(this,"Len: "+len,Toast.LENGTH_SHORT).show();
 
 
 
@@ -54,6 +52,12 @@ public class AddSiteActivity extends AppCompatActivity implements View.OnClickLi
         setupDate(day, month, year);
 
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //sites.saveSites(getApplicationContext());
     }
 
     private void setupDate(int day, int month, int year) {
