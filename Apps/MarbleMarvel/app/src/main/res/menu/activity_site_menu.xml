@@ -21,6 +21,12 @@ tools:context="com.mm.sites.SiteActivity">
     android:title="Enter Attendance"
     android:orderInCategory="300"
     app:showAsAction="never" />
+
+<item
+        android:id="@+id/site_menu_transfer_labour"
+        android:title="Trasnfer Labour"
+        android:orderInCategory="400"
+        app:showAsAction="never" />
 </menu>
 
     <!--TODO: Remove, Transfer Labour-->

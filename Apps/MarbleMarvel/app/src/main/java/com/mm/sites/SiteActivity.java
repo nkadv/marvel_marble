@@ -151,6 +151,16 @@ public class SiteActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("site_id",siteId);
                 startActivity(intent);
                 break;
+            case R.id.site_menu_transfer_labour:
+
+                Toast.makeText(SiteActivity.this, "siteId: "+siteId, Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, com.mm.sites.expenses.labour.TransferLabour.class);
+                intent.putExtra("site_id",siteId);
+
+                startActivity(intent);
+                break;
+
+
             default:
                 break;
         }

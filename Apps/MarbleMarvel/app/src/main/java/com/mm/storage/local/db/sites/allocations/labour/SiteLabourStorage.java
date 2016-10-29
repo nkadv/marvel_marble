@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
+import com.mm.labours.Labour;
 import com.mm.storage.local.db.DBHelper;
 import com.mm.storage.local.db.DBSchema;
 import com.mm.storage.local.db.DBStorage;
@@ -109,7 +110,46 @@ public class SiteLabourStorage implements ISiteLabourStorage {
 //                null                                 // The sort order
 //        );
 //
-        Toast.makeText(context, "Inserted : "+c.getCount(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, "Inserted : "+c.getCount(), Toast.LENGTH_SHORT).show();
         return c;
+    }
+
+    @Override
+    public ArrayList<Labour> getLabourList(Context context, Integer siteId) {
+        DBHelper dbHelper = DBStorage.getInstance(context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ArrayList<Labour> labourList;
+
+
+        String lTable = DBSchema.Labours.TABLE_NAME;
+        String slTable = DBSchema.SiteLabours.TABLE_NAME;
+
+        String QUERY = "SELECT " +lTable+"."+DBSchema.Labours.LABOUR_ID+","+DBSchema.Labours.NAME+
+                " FROM " + lTable +" join "+  slTable+
+                " on "+ slTable+"."+DBSchema.SiteLabours.LABOUR_ID +" = "+
+                lTable+"."+DBSchema.Labours.LABOUR_ID + " WHERE "+ DBSchema.SiteLabours.SITE_ID + " = ?"  ;
+
+        String selectionArgs [] ={siteId.toString()};
+        Cursor c = db.rawQuery(QUERY, selectionArgs);
+
+        if(c!=null & c.getCount() >0){
+
+            labourList = new ArrayList<Labour>();
+            c.moveToFirst();
+            do{
+                Labour lb = new Labour();
+                lb.id = c.getInt(0);
+                lb.name = c.getString(1);
+
+                labourList.add(lb);
+
+            }while(c.moveToNext());
+
+        }else{
+            labourList =null;
+        }
+
+
+        return labourList;
     }
 }

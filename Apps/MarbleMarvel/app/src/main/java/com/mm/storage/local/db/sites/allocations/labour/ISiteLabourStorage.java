@@ -3,6 +3,8 @@ package com.mm.storage.local.db.sites.allocations.labour;
 import android.content.Context;
 import android.database.Cursor;
 
+import com.mm.labours.Labour;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -15,4 +17,6 @@ public interface ISiteLabourStorage {
     public boolean transferLabours(Context context, ArrayList<Integer> l_list,Integer fromSiteId,Integer toSiteId,Date date);
     public boolean removeLabours(Context context, ArrayList<Integer> l_list,Integer siteId,Date date);
     public Cursor getLabours(Context context, Integer siteId);
+    public ArrayList<Labour> getLabourList(Context context, Integer siteId);
+
 }

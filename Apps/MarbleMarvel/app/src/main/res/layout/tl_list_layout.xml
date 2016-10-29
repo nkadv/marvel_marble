@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tl_labour_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:minHeight="40dp"
+        android:textSize="19dp"/>
+
+    <TextView
+        android:id="@+id/tl_labour_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:maxLength="22"
+        android:textStyle="bold"
+        android:textSize="19dp"/>
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/tl_so"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="s/o: "-->
+        <!--android:layout_below="@+id/tl_id"-->
+        <!--android:textSize="18sp"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tl_fname"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="18sp"-->
+        <!--android:layout_below="@+id/tl_id"-->
+        <!--android:layout_toRightOf="@id/tl_so"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tl_place"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/tl_name"-->
+        <!--android:textSize="18sp"/>-->
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/tl_labour_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+
+        />
+
+</RelativeLayout>

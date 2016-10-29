@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity
         /*Content Pane*/
         lvActiveSites = (ListView)findViewById(R.id.m_active_s_list);
         lvActiveSites.setOnItemClickListener(this);
+        lvActiveSites.setDividerHeight(10);
         sStorage = new SiteStorage();
         populateActiveSites("");
 
